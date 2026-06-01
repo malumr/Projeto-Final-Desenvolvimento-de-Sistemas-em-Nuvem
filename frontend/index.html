@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistema de Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gerenciamento de Tarefas</h1>
+        <p class="integrantes">
+            Isabela Orçati &bull; Maria Fernanda Souza &bull;
+            Maria Luiza Matos &bull; Mariana Gama &bull; Marina Cristini
+        </p>
+    </header>
+
+    <main>
+
+        <!-- Projetos -->
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <form id="formProjeto">
+                <input type="hidden" id="idProjeto" />
+                <input type="text" id="nomeProjeto" placeholder="Nome do Projeto" required />
+                <input type="text" id="descricaoProjeto" placeholder="Descrição" />
+                <div class="form-buttons">
+                    <button type="submit" id="btnSubmitProjeto">Adicionar Projeto</button>
+                    <button type="button" id="cancelarEdicaoProjeto" class="btn-cancelar" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+            <ul id="listaProjetos"></ul>
+        </section>
+
+        <!-- Equipes -->
+        <section id="equipes">
+            <h2>Equipes</h2>
+            <form id="formEquipe">
+                <input type="hidden" id="idEquipe" />
+                <input type="text" id="nomeEquipe" placeholder="Nome da Equipe" required />
+                <div class="form-buttons">
+                    <button type="submit" id="btnSubmitEquipe">Adicionar Equipe</button>
+                    <button type="button" id="cancelarEdicaoEquipe" class="btn-cancelar" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+            <ul id="listaEquipes"></ul>
+        </section>
+
+        <!-- Usuários -->
+        <section id="usuarios">
+            <h2>Usuários</h2>
+            <form id="formUsuario">
+                <input type="hidden" id="idUsuario" />
+                <input type="text" id="nomeUsuario" placeholder="Nome" required />
+                <input type="email" id="emailUsuario" placeholder="Email" required />
+                <select id="selectEquipeUsuario">
+                    <option value="">Selecione a Equipe</option>
+                </select>
+                <div class="form-buttons">
+                    <button type="submit" id="btnSubmitUsuario">Adicionar Usuário</button>
+                    <button type="button" id="cancelarEdicaoUsuario" class="btn-cancelar" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+            <ul id="listaUsuarios"></ul>
+        </section>
+
+        <!-- Tarefas -->
+        <section id="tarefas">
+            <h2>Tarefas</h2>
+            <form id="formTarefa">
+                <input type="hidden" id="idTarefa" />
+                <input type="text" id="tituloTarefa" placeholder="Título da Tarefa" required />
+                <input type="text" id="descricaoTarefa" placeholder="Descrição" />
+                <input type="date" id="dataCriacao" />
+                <select id="selectProjetoTarefa">
+                    <option value="">Selecione o Projeto</option>
+                </select>
+                <select id="selectStatusTarefa">
+                    <option value="Pendente">Pendente</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Concluída">Concluída</option>
+                </select>
+                <div class="form-buttons">
+                    <button type="submit" id="btnSubmitTarefa">Adicionar Tarefa</button>
+                    <button type="button" id="cancelarEdicaoTarefa" class="btn-cancelar" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+            <ul id="listaTarefas"></ul>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
